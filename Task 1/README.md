@@ -16,7 +16,7 @@ The website is as follow
 <p>2. If push is made then it will automatically be triggered and the updated content is copied to webdev folder and docker container is ran
 <p>3. Thus the website is up<p>
   
-![Step 2](https://raw.githubusercontent.com/SarthakPhatate/DevOps-Assembly-Line/master/Task%201/images/3.png)
+![Step 2](https://raw.githubusercontent.com/SarthakPhatate/DevOps-Assembly-Line/master/Task%201/images/4.png)
   
 The website is as follow
 ![Step 2](https://raw.githubusercontent.com/SarthakPhatate/DevOps-Assembly-Line/master/Task%201/images/5.png)
