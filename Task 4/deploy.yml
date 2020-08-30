@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name:  web-deploy
+
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      env: slave
+  template:
+    metadata:
+      name: web-pod
+      labels:
+        env: slave
+    spec:
+      containers:
+      - name: task4
+        image: sarthakphatate/task4:v1

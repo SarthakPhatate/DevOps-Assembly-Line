@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-deployment
+  labels: 
+    app: prometheus
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: prometheus
+  template:
+    metadata:
+      name: prometheus-deployment
+      labels:
+        app: prometheus
+    spec:
+      volumes:
+      - name: prometheus-storage
+        persistentVolumeClaim:
+          claimName: prometheus-pvc
+        
+      containers:
+      - name: prometheus-os
+        image: sarthakphatate/prometheus
+        imagePullPolicy: IfNotPresent
+        volumeMounts:
+        - mountPath: "/logs"
+          name: prometheus-storage
